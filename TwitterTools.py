@@ -5,8 +5,6 @@ import json
 """
 TwitterTools.py
 ---------------
-Niall Harris - July 2014
-
 Some functions I used to do Assignment 1 in Coursera's Introduction to Data Science course. 
 
 """
@@ -77,9 +75,9 @@ def stripPunctuation(text):
 	Remove punctuation from a string.
 	"""
 	exclude = set(string.punctuation)
-	clean_text = ''.join(ch for ch in text if ch not in exclude)
+    clean_text = ''.join(ch for ch in text if ch not in exclude)
     clean_text = clean_text.replace('\n',' ') # Let's account for newline characters also 
-	return clean_text.encode('ascii','ignore')
+    return clean_text.encode('ascii','ignore')
 
 def getFrequencies(tweets):
     """
