@@ -71,10 +71,10 @@ def excludeTwitterTags(tweet):
 	return twext
 
 def stripPunctuation(text):
-	""" 
-	Remove punctuation from a string.
-	"""
-	exclude = set(string.punctuation)
+    """
+    Remove punctuation from a string.
+    """
+    exclude = set(string.punctuation)
     clean_text = ''.join(ch for ch in text if ch not in exclude)
     clean_text = clean_text.replace('\n',' ') # Let's account for newline characters also 
     return clean_text.encode('ascii','ignore')
